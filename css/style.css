@@ -141,7 +141,7 @@ body{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      align-items: flex-end;
+      /* align-items: flex-start; */
     }
 
     .pricing{
