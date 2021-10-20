@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
   }
 
@@ -17,7 +17,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
   }
   
@@ -73,12 +73,12 @@ body{
 
   #logo{
     /* -webkit-animation: logo_grow; */
-    animation-name: logo_grow;
+    animation-name: animatedlogo;
     animation-duration: 5s;
     animation-iteration-count: 1;
   }
   
-  @keyframes logo_grow{
+  @keyframes animatedlogo{
     from {
       width: 50px;
       opacity: 0;
@@ -176,3 +176,4 @@ body{
       display: none;
    
   }
+}
