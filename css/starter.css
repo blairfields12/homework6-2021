@@ -2,13 +2,34 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
+    font-family: 'Alegreya Sans SC', sans-serif;  
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
   }
   
   header{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+
+  .nav_links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   
+  nav ul li a:visited{
+    color:blue;
+  }
+
   h1{
     font-size: 2em;
     text-align: center;
@@ -58,8 +79,16 @@ body{
             text-decoration-style: dotted;
   }
 
+  /* .nav a:visited, .nav a:hover
+    {background-color:transparent; text-decoration:none}
+   */
+
   .pricing{
     min-height: 475px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .card {
@@ -67,6 +96,9 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
   
   }
 
@@ -77,8 +109,7 @@ body{
   
   .card > ul li {
     width: 90%;
-    margin: 20px auto;
-    
+    margin: 20px auto;    
   }
 
 .card button{
@@ -90,13 +121,24 @@ body{
     background: #288080;
     color: white;
     font-size: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
   
   .card h3{
     font-size: 4em;
     color: white;
     text-align: center;
-  }
+    background: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    width: 100%;
+    }
   
   .card_big{
     -webkit-transform: initial;
@@ -104,7 +146,25 @@ body{
   }
 
   .gallery{
+    display: inline-flex;
     min-height: 600px;
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    /* width: 300px; */
+    flex-basis: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    /* #image1 { 
+      border: 10px solid b;
+
+    } */
+    /* align-items: center;  */
+   /* justify-content: space-around; */
+    /* justify-content: space-between; */
   }
   
   footer{
@@ -114,11 +174,113 @@ body{
     text-align: center;
   }
 
+  #logo{
+    -webkit-animation: logo_grow;
+    animation-name: logo_grow;
+    animation-duration: 5s;
+  }
+
+  @-webkit-keyframes logo_grow{
+    from {
+      width: 50px;
+      opacity: 0;
+    }
+    to {
+      width: 425px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes logo_grow{
+    from {
+      width: 50px;
+      opacity: 0;
+    }
+    to {
+      width: 425px;
+      opacity: 1;
+    }
+  }
+
   @media screen and (min-width: 850px){
     .card_big{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
         z-index: -99;
   }
-}
+  header { 
+    flex-direction: row;
+    justify-content: space-between;
+    /* position:fixed; */   
+    /* position: fixed;
+    top: 0;
+    /* bottom: auto; */
+    /* align-self: flex-start;  */
+     }
+
+  /* #logo { 
+    position: fixed;
+    top: 0;
+    width: 100% */
+
+  .nav_links { 
+    flex-direction: row;
+    /* position: fixed;
+    top: 0;
+    width: 100% */
+  }
+
+  .card {
+    flex-basis: 250px;
+  }
+
+  .card_big {
+    flex-basis: 250px;
+  }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    #logo{
+      animation: none;
+    }
+  }
+
+  @media print {
+    body{
+      background-image: none;
+    }
+    nav{
+      width: 100%;
+    }
+    .nav_links{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    /* #pricing { 
+      display: inline-flex;
+      justify-content: center;
+    } */
+
+    .pricing{
+      /* align-items: flex-end;
+      justify-content: center; */
+      align-items: baseline;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card{
+      border: 2px solid #45ADDD;
+      flex-basis: 250px;
+    }
   
+
+    .gallery{
+      display: none;
+    }
+    #gallery{
+      display:none;
+    }
+  }
