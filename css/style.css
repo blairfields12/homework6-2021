@@ -141,14 +141,14 @@ body{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      /* align-items: flex-end; */
+      align-items: flex-end;
     }
 
     .pricing{
       display: flex; 
       flex-direction: row;
       align-items: flex-end;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       flex-wrap: nowrap;
     }
 
