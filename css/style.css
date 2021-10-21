@@ -27,21 +27,26 @@ body{
     color:blue;
   }
 
+  a.skip:visited{
+    color:blue;
+  }
+
  
   .pricing{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     /* flex-basis: 450px; */
 
   }
 
   .card {
-    display: flex;
+    /* display: flex; */
     flex-basis: 450px;
-    flex-direction: column;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
   }
 
   /* .card_big {
@@ -129,7 +134,7 @@ body{
     }
 
     .card {
-        display: flex; 
+        /* display: flex;  */
         flex-basis: 250px;
         }
     } 
@@ -143,14 +148,22 @@ body{
   @media print {
     body{
       background-image: none;
-      font-family: serif;
+      /* font-family: serif; */
+    }
+    
+    header { 
+      flex-direction: column;
+    }
+
+    nav { 
+      width: 100%;
     }
 
     .nav_links{
-      display: flex;
+      /* display: flex; */
       flex-direction: row;
       justify-content: space-around;
-      column-gap: 175px;
+      /* column-gap: 175px; */
       /* align-items: flex-start; */
     }
 
@@ -164,7 +177,7 @@ body{
     }
 
     .card{
-      display: flex; 
+      /* display: flex;  */
       border: 2px solid #45ADDD;
       flex-basis: 250px;
       flex-wrap: nowrap;
