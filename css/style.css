@@ -34,6 +34,8 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    /* flex-basis: 450px; */
+
   }
 
   .card {
@@ -41,6 +43,12 @@ body{
     flex-basis: 450px;
     flex-direction: column;
   }
+
+  /* .card_big {
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+  } */
 
 /* .card button{
     display: flex;
